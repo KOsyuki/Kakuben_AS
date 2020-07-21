@@ -1,25 +1,20 @@
-package com.example.myapplication;
+package com.example.kakuben;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TODOlistActivity extends AppCompatActivity implements View.OnClickListener{
+public class SakuseiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_todolist);
-        findViewById(R.id.back).setOnClickListener(this);
+        setContentView(R.layout.activity_sakusei);
+
         immersiveMode();
 
-    }
-    public void onClick(View view){
-        Intent intent = new Intent(this, SakuseiActivity.class);  //インテントの作成
-        startActivity(intent);                                 //画面遷移
     }
 
     private void immersiveMode(){
@@ -44,4 +39,5 @@ public class TODOlistActivity extends AppCompatActivity implements View.OnClickL
                     }
                 });
     }
+
 }

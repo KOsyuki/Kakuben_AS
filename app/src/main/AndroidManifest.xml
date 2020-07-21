@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.kakuben">
 
     <application
         android:allowBackup="true"
@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SakuseiActivity"
+            android:name="com.example.kakuben.SakuseiActivity"
             android:screenOrientation="landscape"></activity>
         <activity
-            android:name=".TODOlistActivity"
+            android:name="com.example.kakuben.TODOlistActivity"
             android:label="string/app_name"
             android:screenOrientation="landscape"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.kakuben.MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
