@@ -22,12 +22,14 @@ public class SakuseiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText et = findViewById(R.id.name);
+                EditText et2 = findViewById(R.id.number);
 
                 // インテントの準備
                 Intent intent = new Intent(SakuseiActivity.this,TODOlistActivity.class);
 
                 // サブ画面に渡す値
                 intent.putExtra("main_text",et.getText().toString());
+                intent.putExtra("main2_text",et2.getText().toString());
 
                 // サブ画面を表示する
                 startActivity(intent);
