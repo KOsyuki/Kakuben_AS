@@ -1,8 +1,10 @@
 package com.example.kakuben;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +16,25 @@ public class SakuseiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sakusei);
 
         immersiveMode();
+
+        findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText et = findViewById(R.id.name);
+
+                // インテントの準備
+                Intent intent = new Intent(SakuseiActivity.this,TODOlistActivity.class);
+
+                // サブ画面に渡す値
+                intent.putExtra("main_text",et.getText().toString());
+
+                // サブ画面を表示する
+                startActivity(intent);
+            }
+        });
+
+
+
 
     }
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,12 @@ public class TODOlistActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_todolist);
         findViewById(R.id.back).setOnClickListener(this);
         immersiveMode();
+
+        // メイン画面からデータを受け取り表示する
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("main_text");
+        Button tx = findViewById(R.id.task);
+        tx.setText(str);
 
     }
     public void onClick(View view){
