@@ -21,8 +21,10 @@ public class TODOlistActivity extends AppCompatActivity implements View.OnClickL
         // 作成画面からデータを受け取り表示する
         Intent intent = getIntent();
         String str = intent.getStringExtra("main_text");
+        String str2 = intent.getStringExtra("main2_text");
+
         Button tx = findViewById(R.id.task);
-        tx.setText(str);
+        tx.setText(str + "  " + str2);
 
         target = (Button)findViewById(R.id.task);
         target.setOnTouchListener(this);
