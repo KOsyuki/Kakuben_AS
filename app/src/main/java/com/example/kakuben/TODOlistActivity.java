@@ -17,7 +17,7 @@ public class TODOlistActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.back).setOnClickListener(this);
         immersiveMode();
 
-        // 作成画面からデータを受け取り表示する
+        // 作成画面からデータを受け取り表示するaaaaaaaaaaaaaaaaaaa
         Intent intent = getIntent();
         String str = intent.getStringExtra("main_text");
         Button tx = findViewById(R.id.task);
