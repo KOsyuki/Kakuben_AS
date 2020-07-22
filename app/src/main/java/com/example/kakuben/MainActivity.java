@@ -16,12 +16,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         immersiveMode();
         findViewById(R.id.start).setOnClickListener(this);  //リスナーをボタンに登録
     }
-    //ボタンが押された時の処理
+
+    //画面遷移処理
     public void onClick(View view){
         Intent intent = new Intent(this, TODOlistActivity.class);  //インテントの作成
         startActivity(intent);                                 //画面遷移
     }
 
+    //没入モード
     private void immersiveMode(){
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

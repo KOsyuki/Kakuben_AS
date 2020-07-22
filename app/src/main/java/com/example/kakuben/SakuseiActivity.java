@@ -17,6 +17,7 @@ public class SakuseiActivity extends AppCompatActivity {
 
         immersiveMode();
 
+        //値受け渡し処理
         findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,12 +33,9 @@ public class SakuseiActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 
+    //没入モード
     private void immersiveMode(){
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
