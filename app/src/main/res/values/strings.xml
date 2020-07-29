@@ -2,6 +2,7 @@
     <string name="app_name">格勉</string>
 
     <string-array name="list">
+        <item>科目</item>
         <item>国語</item>
         <item>現代文</item>
         <item>古文</item>
