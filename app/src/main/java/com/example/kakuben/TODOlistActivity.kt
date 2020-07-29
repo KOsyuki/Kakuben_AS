@@ -17,7 +17,6 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
         setContentView(R.layout.activity_todolist)
 
         findViewById<View>(R.id.task1).setOnClickListener(this)
-        findViewById<View>(R.id.task2).setOnClickListener(this)
         immersiveMode()
 
         // 作成画面からデータを受け取り表示する
@@ -29,8 +28,6 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
 
         target1 = findViewById<View>(R.id.task1) as Button
         target1!!.setOnTouchListener(this)
-        target2 = findViewById<View>(R.id.task2) as Button
-        target2!!.setOnTouchListener(this)
     }
 
     //画面遷移処理
@@ -61,26 +58,15 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
     private var targetLocalY1 = 0
     private var screenX1 = 0
     private var screenY1 = 0
-    private var target2: Button? = null
-    private var targetLocalX2 = 0
-    private var targetLocalY2 = 0
-    private var screenX2 = 0
-    private var screenY2 = 0
     override fun onTouch(v: View, event: MotionEvent): Boolean {
         val x1 = event.rawX.toInt()
         val y1 = event.rawY.toInt()
-        val x2 = event.rawX.toInt()
-        val y2 = event.rawY.toInt()
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 targetLocalX1 = target1!!.left
                 targetLocalY1 = target1!!.top
                 screenX1 = x1
                 screenY1 = y1
-                targetLocalX2 = target2!!.left
-                targetLocalY2 = target2!!.top
-                screenX2 = x2
-                screenY2 = y2
             }
             MotionEvent.ACTION_MOVE -> {
                 val diffX1 = screenX1 - x1
@@ -93,16 +79,6 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
                         targetLocalY1 + target1!!.height)
                 screenX1 = x1
                 screenY1 = y1
-                val diffX2 = screenX2 - x2
-                val diffY2 = screenY2 - y2
-                targetLocalX2 -= diffX2
-                targetLocalY2 -= diffY2
-                target2!!.layout(targetLocalX2,
-                        targetLocalY2,
-                        targetLocalX2 + target2!!.width,
-                        targetLocalY2 + target2!!.height)
-                screenX2 = x2
-                screenY2 = y2
             }
         }
         return false
