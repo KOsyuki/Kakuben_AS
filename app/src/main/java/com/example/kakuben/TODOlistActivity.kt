@@ -16,7 +16,7 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_todolist)
 
-        findViewById<View>(R.id.task1).setOnClickListener(this)
+        findViewById<View>(R.id.plus).setOnClickListener(this)
         immersiveMode()
 
         // 作成画面からデータを受け取り表示する
