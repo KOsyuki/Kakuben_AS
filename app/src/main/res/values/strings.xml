@@ -4,9 +4,25 @@
     <string-array name="list">
         <item>科目</item>
         <item>国語</item>
+        <item>現代文</item>
+        <item>古文</item>
+        <item>漢文</item>
         <item>英語</item>
+        <item>リスニング</item>
         <item>社会</item>
+        <item>地理</item>
+        <item>日本史</item>
+        <item>世界史</item>
+        <item>公民</item>
+        <item>倫理</item>
         <item>数学</item>
+        <item>数学ⅠA</item>
+        <item>数学ⅡB</item>
+        <item>数学Ⅲ</item>
         <item>理科</item>
+        <item>物理</item>
+        <item>生物</item>
+        <item>化学</item>
+        <item>地学</item>
     </string-array>
 </resources>
