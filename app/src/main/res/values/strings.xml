@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">格勉</string>
-    <string name="kakugen">新しいことを勉強してると\n世の中は怖くありません。\n何もしないで、じっとしているから\n怖くなるんです。\n林家彦六(落語家)</string>
+    <string name="kakugen">だれよりも三倍、四倍、五倍\n勉強する者、\nそれが天才だ\n\n野口英世</string>
 
     <string-array name="list">
         <item>科目</item>

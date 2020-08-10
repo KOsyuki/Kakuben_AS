@@ -1,14 +1,24 @@
 package com.example.kakuben
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import android.widget.VideoView
 
 class KakugenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakugen)
+
+        //TODOリスト画面へ遷移
+        val kaku = findViewById<ImageView>(R.id.kaku)
+        kaku.setOnClickListener{
+            val intent = Intent(application, TODOlistActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     //フルスクリーンモード
