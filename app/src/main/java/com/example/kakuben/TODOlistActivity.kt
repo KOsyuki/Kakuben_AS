@@ -91,19 +91,21 @@ class TODOlistActivity : AppCompatActivity(), View.OnClickListener, OnTouchListe
             b6.visibility = View.VISIBLE
             cl.visibility = View.VISIBLE
         }
-        val switch3 = findViewById<Switch>(R.id.switch3)
-        switch3.setOnCheckedChangeListener { buttonView, isChecked ->
-            b9.visibility = View.VISIBLE
-            cl2.visibility = View.VISIBLE
-        }
         val switch4 = findViewById<Switch>(R.id.switch4)
         switch4.setOnCheckedChangeListener { buttonView, isChecked ->
             b8.visibility = View.VISIBLE
             cl4.visibility = View.VISIBLE
         }
+
+        //後光への画面遷移
+        val switch3 = findViewById<Switch>(R.id.switch3)
+        switch3.setOnCheckedChangeListener { buttonView, isChecked ->
+            val intent = Intent(application, GokouActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    //画面遷移処理
+    //TODO作成画面への画面遷移
     override fun onClick(view: View) {
         val intent = Intent(this, SakuseiActivity::class.java) //インテントの作成
         startActivity(intent) //画面遷移
